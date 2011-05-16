@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   
   validates :email, :presence => true,
                     :format   => { :with => email_regex },
-                    :uniqueness => { :case_insensitive => false }
+                    :uniqueness => { :case_sensitive => false }
 
   # Automatically create the virtual attribute 'password confirmation'.
   validates :password, :presence      => true,
